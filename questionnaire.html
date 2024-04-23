@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            align-items: center;
+        }
+
+        input,
+        select {
+            margin-left: 6%;
+            width: 80%;
+            padding: 13px;
+            margin-bottom: 11px;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fffcfd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .class1 {
+            max-width: 900px;
+            margin: auto;
+            background-color: #f068d3;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            align-items: center;
+        }
+
+        button {
+            background-color: #c822c8;
+            color: #fff;
+            padding: 10px 30px;
+            border-top: #fff;
+            border-radius: 8px;
+            margin-top: 10px;
+            
+        }
+
+        button:hover {
+            background-color: #489ac6;
+        }
+
+        
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        textarea {
+            width: 80%;
+            margin-left: 15%;
+            padding: 0px;
+            border-radius: 4px;
+            box-siing: border-box;
+        }
+        .checkbox-group,
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            margin-left: 40%;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="class1">
+        <h1>Survey Form</h1>
+
+        <form>
+            <p>Please fill this form</p>
+            <div class="form-control">
+            <label for="name">*Name:</label>
+            <input type="text" id="name" placeholder="enter your name" required>
+            </div>
+
+            <div class="form-control">
+            <label for="email">*Email:</label>
+            <input type="email" id="email" placeholder="enter your email" required>
+            </div>
+
+            <div class="form-control">
+            <label for="age">*Age:</label>
+            <input type="number" id="age" placeholder="enter your age" required>
+            </div>
+
+            <div class="form-control">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            </div>
+            
+            <div class="form-control">
+            <label for="role">Which option best describes your current role?:</label>
+            <select id="role" name="role" required>
+                <option value="">Select</option>
+                <option value="teacher">Teacher</option>
+                <option value="student">Student</option>
+                <option value="staff">Staff</option>
+                <option value="other">Other</option>
+            </select>
+           
+            <label>How likely is it that you would recommend pizza to a friend?</label>
+            <div class="radio-group">
+            <input type="radio" id="definitely" name="recommendation" value="definitely">
+            <label for="definitely">Definitely</label>
+            <input type="radio" id="maybe" name="recommendation" value="maybe">
+            <label for="maybe">Maybe</label>
+            <input type="radio" id="notSure" name="recommendation" value="not sure">
+            <label for="notSure">Not sure</label>
+            </div>
+            <label for="pizza">What do you like most in pizza?:</label>
+            <select id="pizza" name="pizza" required>
+                <option value="">Select</option>
+                <option value="cheese">Cheese</option>
+                <option value="tomato">Tomato</option>
+                <option value="bread">Bread</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label>Things that should be normalized to eat with pizza:</label>
+            <div class="checkbox-group">
+            <input type="checkbox" id="moreCheese" name="toppings" value="more cheese">
+            <label for="moreCheese">More Cheese</label>
+            <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+            <label for="pineapple">Pineapple</label>
+            <input type="checkbox" id="olive" name="toppings" value="olive">
+            <label for="olive">Olive</label>
+            <input type="checkbox" id="chocolate" name="toppings" value="chocolate">
+            <label for="chocolate">Chocolate</label>
+            </div>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
